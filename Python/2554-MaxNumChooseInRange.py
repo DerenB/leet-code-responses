@@ -1,4 +1,5 @@
 '''
+
 2554. Maximum Number of Integers to Choose From a Range I
 
 You are given an integer array banned and two integers n and maxSum. You are choosing some number of integers following the below rules:
@@ -30,8 +31,9 @@ Output: 7
 Explanation: You can choose the integers 1, 2, 3, 4, 5, 6, and 7.
 They are from the range [1, 7], all did not appear in banned, and their sum is 28, which did not exceed maxSum.
 
-
 '''
+
+
 
 ### FINAL SOLUTION
 def maxCount(banned, n, maxSum) -> int:
@@ -51,6 +53,7 @@ def maxCount1(banned, n, maxSum) -> int:
     return sum(q<=M for q in accumulate(filter(lambda v,b={*b}:v not in b,range(1,n+1))))
 
 
+
 ### SHORTEN SOLUTION TO MAKE TIME LIMIT
 def maxCount2(banned, n, maxSum) -> int:
     nonBannedIntegers = []
@@ -67,8 +70,8 @@ def maxCount2(banned, n, maxSum) -> int:
     return resultCount
 
 
-### INITIAL SOLUTION
 
+### INITIAL SOLUTION
 # def maxCount(self, banned: List[int], n: int, maxSum: int) -> int:
 def maxCount3(banned, n, maxSum) -> int:
         
